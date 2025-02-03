@@ -1,0 +1,40 @@
+.hero-section {
+    /* height: 100vh; */
+}
+
+.hero-left {
+    /* width: 50%; */
+}
+
+.hero-right {
+    display: flex;
+    flex-direction: column;
+    /* width: 50%; */
+    position: relative;
+}
+
+.hero-right img {
+    border-radius: 10px;
+    box-shadow: 0 20px 40px #0000001a;
+}
+
+.graphic-element {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #9F7A49;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.graphic-1 {
+    top: -50px;
+    right: -50px;
+}
+
+.graphic-2 {
+    bottom: -50px;
+    left: -50px;
+}
+

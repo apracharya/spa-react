@@ -22,7 +22,7 @@ const Navbar = () => {
               <button className="nav-link">About</button>
               <button className="nav-link">Gallery</button>
               <button className="nav-link">Contact</button>
-              <button href="/book" className="nav-book-btn">Book Now</button>
+              <button href="/book" className="nav-book-btn bg-slate-800">Book Now</button>
             </nav>
 
             {/* Mobile menu button */}
