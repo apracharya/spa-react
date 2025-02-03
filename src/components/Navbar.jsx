@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Bot as Lotus, Menu, X } from 'lucide-react';
-import '../assets/styles/navbar.css';
+import '../styles/navbar.css';
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {

@@ -6,10 +6,7 @@
     /* width: 50%; */
 }
 
-.hero-right {
-    display: flex;
-    flex-direction: column;
-    /* width: 50%; */
+.hero-img-container {
     position: relative;
 }
 
