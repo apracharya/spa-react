@@ -6,6 +6,7 @@ import Testimonial from "../components/Testimonial";
 import Service from "../components/Service";
 import Testing from "../components/Testing";
 import Gallery from "../components/Gallery";
+import { NavLink } from "react-router-dom";
 
 const HomePage = () => {
   const [testimonials, setTestimonial] = useState([
@@ -79,13 +80,15 @@ const HomePage = () => {
               body and soul. Our expert therapists provide personalized services
               in a serene environment.
             </p>
-            <button
-              className="mt-10 text-sm cursor-pointer transition-all duration-200
+            <NavLink to="/booking">
+              <button
+                className="mt-10 text-sm cursor-pointer transition-all duration-200
                 bg-slate-600 hover:bg-slate-500 dark:bg-slate-200 dark:hover:bg-slate-50 
                 font-semibold text-white dark:text-black py-3 px-6 rounded-full"
-            >
-              Book Appointment
-            </button>
+              >
+                Book Appointment
+              </button>
+            </NavLink>
           </div>
           <div className="hero-right flex flex-col justify-center lg:mt-12 w-full lg:w-1/2">
             <div className="hero-img-container">
@@ -102,8 +105,10 @@ const HomePage = () => {
           id="service-section"
           className="py-16 px-6 md:px-12 lg:px-24 dark:bg-slate-900 bg-slate-200"
         >
-          <h1 className="text-5xl text-center font-semibold 
-            text-slate-700 dark:text-slate-100">
+          <h1
+            className="text-5xl text-center font-semibold 
+            text-slate-700 dark:text-slate-100"
+          >
             Our Services
           </h1>
           <p className="text-center mt-6 text-slate-600 dark:text-slate-200">
@@ -139,10 +144,11 @@ const HomePage = () => {
           id="testimonial-section"
           className="py-16 px-6 md:px-12 lg:px-24 dark:bg-slate-700 bg-slate-200 "
         >
-          <h1 
+          <h1
             className="text-slate-700 dark:text-slate-100 
               text-4xl md:text-5xl font-semibold text-center mb-12
-              ">
+              "
+          >
             What Our Customers are Saying
           </h1>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
