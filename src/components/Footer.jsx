@@ -27,7 +27,7 @@ const Footer = () => {
           {/* About Section */}
           <div>
             <h3 className="text-2xl font-serif mb-4">{data.companyName}</h3>
-            <p className="text-slate-300 mb-4">{data.footerText}</p>
+            <p className="text-slate-300 mb-4 text-justify">{data.footerText}</p>
             <div className="flex space-x-4">
               <a
                 href="#"

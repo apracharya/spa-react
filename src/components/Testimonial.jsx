@@ -6,7 +6,7 @@ const Testimonial = (props) => {
   return (
     <div className="flex flex-col gap-6 border-l-4 border-amber-300 ps-10 py-6">
       <div className="">
-        <p className="review-text">
+        <p className="review-text dark:text-slate-50">
           <span className="quotation-mark" style={{'marginRight': '10px'}}>
             "
           </span>
@@ -17,7 +17,7 @@ const Testimonial = (props) => {
         </p>
       </div>
       <div className="testimonial-bottom">
-        <p className="font-semibold text-xl mb-2">
+        <p className="font-semibold text-xl mb-2 dark:text-white text-black">
             {props.firstName} {props.lastName}
         </p>    
         <StarRating value={props.rating} />
