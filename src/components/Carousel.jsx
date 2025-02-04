@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-const Carousel = ({ slides }) => {
+const Carousel = ({ slides, onSlideChange, intervalTime = 3000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isHovered, setHovered] = useState(false);
+  const intervalRef = useRef(null);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
@@ -15,8 +17,23 @@ const Carousel = ({ slides }) => {
     );
   };
 
+  useEffect(() => {
+    onSlideChange(currentIndex);
+  }, [currentIndex, onSlideChange]);
+
+  useEffect(() => {
+    if (!isHovered) {
+      intervalRef.current = setInterval(nextSlide, intervalTime);
+    }
+    return () => clearInterval(intervalRef.current);
+  }, [isHovered, intervalTime]);
+
   return (
-    <div className="relative w-full overflow-hidden bg-gray-100">
+    <div
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      className="relative w-full overflow-hidden bg-gray-100"
+    >
       {/* Carousel Container */}
       <div
         className="flex transition-transform duration-500"
@@ -25,13 +42,16 @@ const Carousel = ({ slides }) => {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className="carousel-slide w-full flex-shrink-0"
+            className="carousel-slide relative w-full flex-shrink-0"
           >
             <img
-              src={slide}
+              src={slide.imgUrl}
               alt={`Slide ${index}`}
               className="w-full h-full object-cover"
             />
+            <div className="absolute top-2 left-2 text-white text-sm px-2 py-1">
+              * Hover over the image to stop auto scrolling
+            </div>
           </div>
         ))}
       </div>

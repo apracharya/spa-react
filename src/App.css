@@ -30,3 +30,9 @@
     transform: translateY(-10px);
     box-shadow: 6px 24px 52px rgb(28, 37, 60);
 }
+
+.carousel-slide {
+    min-width: 100%;
+    max-width: 100%;
+    position: relative;
+}
