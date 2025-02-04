@@ -3,10 +3,12 @@ import { Bot as Lotus, Menu, X } from "lucide-react";
 import "../styles/navbar.css";
 import { NavLink } from "react-router-dom";
 import useScrollToComponent from "../functions/useScrollToComponent";
+import useScrollToComponentHere from "../functions/useScrollToComponentHere";
 
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const scrollToComponent = useScrollToComponent();
+  const scrollToComponentHere = useScrollToComponentHere();
 
   useEffect(() => {
     // to close mobile menu when window is above 768px
@@ -32,7 +34,7 @@ const Navbar = () => {
             <img
               className="nav-logo"
               src="./src/assets/respira-logo-main.svg"
-              alt=""
+              alt="respira-home"
             />
           </NavLink>
 
@@ -52,7 +54,7 @@ const Navbar = () => {
               Gallery
             </button>
             <button
-              onClick={() => scrollToComponent("footer-section")}
+              onClick={() => scrollToComponentHere("footer-section")}
               className="nav-link"
             >
               Contact
