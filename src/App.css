@@ -1,0 +1,38 @@
+/* settings.json
+{
+    "[html]": {
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[css]": {
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+    "[typescript]": {
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.formatOnSave": false
+}
+*/
+
+.service-card {
+    /* transition: transform 0.5s ease; */
+    box-shadow: 4px 12px 30px rgb(43, 52, 63);
+    transition: box-shadow 0.5s ease, transform 0.5s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 6px 24px 52px rgb(28, 37, 60);
+}
+
+.carousel-slide {
+    min-width: 100%;
+    max-width: 100%;
+    position: relative;
+}

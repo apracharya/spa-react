@@ -8,8 +8,12 @@ import {
   Mail,
   Clock,
 } from "lucide-react";
+import { NavLink } from "react-router-dom";
+import useScrollToComponent from "../functions/useScrollToComponent";
 
 const Footer = () => {
+  const scrollToComponent = useScrollToComponent();
+
   const [data, setData] = useState({
     companyName: "Respira Spa & Wellness",
     footerText:
@@ -27,22 +31,25 @@ const Footer = () => {
           {/* About Section */}
           <div>
             <h3 className="text-2xl font-serif mb-4">{data.companyName}</h3>
-            <p className="text-slate-300 mb-4">{data.footerText}</p>
+            <p className="text-slate-300 mb-4 text-justify">{data.footerText}</p>
             <div className="flex space-x-4">
               <a
                 href="#"
+                // target="blank"
                 className="text-slate-300 hover:text-white transition-colors"
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a
                 href="#"
+                // target="blank"
                 className="text-slate-300 hover:text-white transition-colors"
-              >
+                >
                 <Instagram className="w-5 h-5" />
               </a>
               <a
                 href="#"
+                // target="blank"
                 className="text-slate-300 hover:text-white transition-colors"
               >
                 <Twitter className="w-5 h-5" />
@@ -55,36 +62,34 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="#"
+                <button
+                  onClick={() => {scrollToComponent('service-section')}}
                   className="text-slate-300 hover:text-white transition-colors"
                 >
                   Our Services
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  href="#"
+                <NavLink
+                  to="/booking"
                   className="text-slate-300 hover:text-white transition-colors"
                 >
                   Book Appointment
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a
-                  href="#"
+                <button
                   className="text-slate-300 hover:text-white transition-colors"
                 >
                   Gift Cards
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  href="#"
+                <button
                   className="text-slate-300 hover:text-white transition-colors"
                 >
                   Special Offers
-                </a>
+                </button>
               </li>
             </ul>
           </div>
