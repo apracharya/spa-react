@@ -36,19 +36,19 @@ const Gallery = () => {
 
   return (
     <div className="">
-      <h1 className="text-center text-5xl font-semibold text-slate-700">
+      <h1 className="text-center text-5xl font-semibold text-slate-700 dark:text-slate-100">
         A Glance at Our Service Areas
       </h1>
-      <p className="text-center mt-6 text-slate-700">
+      <p className="text-center mt-6 text-slate-700 dark:text-slate-300">
         Discover the Ultimate Relaxation and Rejuvenation with our Signature
         Services.
       </p>
       <div className="mt-12 flex flex-col lg:flex-row justify-between gap-10">
         <div className="w-full lg:w-[40%]">
-          <h1 className="text-4xl text-cyan-800 font-semibold leading-12">
+          <h1 className="text-4xl text-cyan-800 dark:text-white font-semibold leading-12">
             {currentTitle}
           </h1>
-          <p className="mt-10 text-justify text-slate-700 leading-7">
+          <p className="mt-10 text-justify text-slate-700 dark:text-slate-200 leading-7">
             {currentText}
           </p>
           <NavLink to="/booking">

@@ -25,7 +25,7 @@ const Footer = () => {
 
   return (
     //   {/* Footer */}
-    <footer id="footer-section" className="bg-slate-900 text-white">
+    <footer id="footer-section" className="dark:border-t-2 bg-slate-900 dark:bg-gradient-to-b dark:from-[#00003c] dark:to-[#000000] text-white">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About Section */}

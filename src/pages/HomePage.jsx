@@ -63,7 +63,7 @@ const HomePage = () => {
           {/* Hero section */}
           <div
             className="hero-section 
-          bg-white dark:bg-slate-700 
+          bg-white dark:bg-gradient-to-b dark:from-[#00004e] dark:to-[#000000]
           px-6 md:px-12 lg:px-24 pb-16 pt-28
           flex flex-col gap-6 md:flex-row justify-between overflow-hidden"
           >
@@ -105,7 +105,7 @@ const HomePage = () => {
           {/* Services section */}
           <div
             id="service-section"
-            className="py-16 px-6 md:px-12 lg:px-24 dark:bg-slate-900 bg-slate-200"
+            className="py-16 px-6 md:px-12 lg:px-24 dark:bg-gradient-to-b dark:from-[#000000] dark:to-[#00003c] bg-slate-200"
           >
             <h1
               className="text-5xl text-center font-semibold 
@@ -135,7 +135,7 @@ const HomePage = () => {
           {/* Gallery section */}
           <div
             id="gallery-section"
-            className="bg-white dark:bg-slate-200 py-16 px-6 md:px-12 lg:px-24"
+            className="bg-white dark:bg-gradient-to-b dark:from-[#00003c] dark:to-[#000000] py-16 px-6 md:px-12 lg:px-24"
           >
             <Gallery />
           </div>
@@ -144,7 +144,7 @@ const HomePage = () => {
           {/* Testimonial section */}
           <div
             id="testimonial-section"
-            className="py-16 px-6 md:px-12 lg:px-24 dark:bg-slate-700 bg-slate-200 "
+            className="py-16 px-6 md:px-12 lg:px-24 dark:bg-gradient-to-b dark:from-[#000000] dark:to-[#00003c] bg-slate-200 "
           >
             <h1
               className="text-slate-700 dark:text-slate-100 
